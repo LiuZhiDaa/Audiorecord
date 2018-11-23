@@ -2,28 +2,11 @@ package com.app.soundrecord.application;
 
 import android.app.Application;
 import android.content.Context;
-import android.content.SharedPreferences;
-import android.preference.PreferenceManager;
-import android.text.TextUtils;
 
 import com.app.soundrecord.BuildConfig;
-import com.app.soundrecord.core.XCoreFactory;
 
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.util.Map;
-
-import ulric.li.XLibFactory;
 import ulric.li.logic.alive.CrashTool;
-import ulric.li.tool.intf.IHttpTool;
-import ulric.li.tool.intf.IHttpToolListener;
-import ulric.li.tool.intf.IHttpToolResult;
-import ulric.li.utils.UtilsAlive;
-import ulric.li.utils.UtilsEnv;
-import ulric.li.utils.UtilsJson;
-import ulric.li.utils.UtilsLog;
-import ulric.li.utils.UtilsNetwork;
+
 
 
 public class XApplication extends Application {
