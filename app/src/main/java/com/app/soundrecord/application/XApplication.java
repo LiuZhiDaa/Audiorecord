@@ -42,7 +42,7 @@ public class XApplication extends Application {
         // 初始化配置
         XConfig.init(this);
 
-        UtilsAlive.init(this);
+
         // 逻辑初始化
         initLogic();
     }
@@ -53,62 +53,11 @@ public class XApplication extends Application {
     }
 
     private void initLogic() {
-        initCountry();
 
-//        appStatusMgr.init();
+
     }
 
-    private void initCountry() {
-        String strCountry = UtilsEnv.getCountry();
-        if (TextUtils.isEmpty(strCountry)) {
-            final SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(this);
-            strCountry = sp.getString("country_code", "");
-            if (TextUtils.isEmpty(strCountry)) {
-                IHttpTool iHttpTool = (IHttpTool) XLibFactory.getInstance().createInstance(IHttpTool.class);
-                iHttpTool.requestToBufferByPostAsync(UtilsNetwork.getURL(XConfig.VALUE_STRING_COUNTRY_URL), null, null, null, new IHttpToolListener() {
-                    @Override
-                    public void onRequestToBufferByPostAsyncComplete(String strURL, Map<String, String> mapParam, Object objectTag, IHttpToolResult iHttpToolResult) {
-                        if (null == iHttpToolResult || !iHttpToolResult.isSuccess() || null == iHttpToolResult.getBuffer()) {
-                            UtilsLog.statisticsLog("application", "get_country_code_fail", null);
-                            return;
-                        }
 
-                        int nCode = UtilsNetwork.VALUE_INT_FAIL_CODE;
-                        JSONObject jsonObject = null;
-                        try {
-                            jsonObject = new JSONObject(new String(iHttpToolResult.getBuffer()));
-                            nCode = UtilsJson.JsonUnserialization(jsonObject, "code", nCode);
-                        } catch (Exception e) {
-                            e.printStackTrace();
-                        }
-
-                        String strCountry = null;
-                        if (UtilsNetwork.VALUE_INT_SUCCESS_CODE == nCode) {
-                            try {
-                                strCountry = jsonObject.getString("country_code");
-                            } catch (JSONException e) {
-                                e.printStackTrace();
-                            }
-                        }
-
-                        if (!TextUtils.isEmpty(strCountry)) {
-                            UtilsLog.statisticsLog("application", "get_country_code_success", jsonObject);
-                            sp.edit().putString("country_code", strCountry).apply();
-                            UtilsLog.addUserInfo("country_code", strCountry);
-                            UtilsEnv.setCountry(strCountry);
-                        } else {
-                            UtilsLog.statisticsLog("application", "get_country_code_empty", null);
-                        }
-                    }
-                });
-
-                return;
-            }
-        }
-
-        UtilsLog.addUserInfo("country_code", strCountry);
-        UtilsEnv.setCountry(strCountry);
-    }
 
     public static Context getContext(){
         return sInstance;
