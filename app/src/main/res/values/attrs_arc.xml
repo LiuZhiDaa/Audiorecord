@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ArcProgress">
+        <attr name="borderWidth" format="dimension"/>
+        <attr name="unprogresColor" format="color"/>
+        <attr name="progressColor" format="color"/>
+        <attr name="tickWidth" format="dimension"/>
+        <attr name="tickDensity" format="integer"/>
+        <attr name="bgShow" format="boolean"/>
+        <attr name="radius" format="dimension"/>
+        <attr name="arcbgColor" format="color"/>
+        <attr name="degree" format="integer"/>
+        <attr name="arcCapRound" format="boolean"/>
+        <attr name="progressStyle" format="enum">
+            <enum name="tick" value="1"/>
+            <enum name="arc" value="0"/>
+        </attr>
+    </declare-styleable>
+</resources>

@@ -1,0 +1,73 @@
+<resources>
+    <string name="app_name">Voice Recorder</string>
+    <string name="facebook_app_id" translatable="false">917051301819960</string>
+    <string-array name="tabTitles">
+        <item>Record</item>
+        <item>Voice</item>
+    </string-array>
+    <string name="main_tv_memory">Available storage space</string>
+    <string name="dialog_file_detail">Details</string>
+    <string name="dialog_file_rename">Rename</string>
+    <string name="dialog_file_delete">Delete</string>
+    <string name="dialog_title_options">Options</string>
+    <string name="dialog_action_cancel">Cancel</string>
+    <string name="toast_file_delete">%1$s was deleted successfully.</string>
+    <string name="toast_file_exists">The file %1$s already exists. Please choose a different file name.</string>
+    <string name="dialog_title_rename">Rename File</string>
+    <string name="dialog_action_ok">OK</string>
+    <string name="dialog_title_delete">Confirm Delete</string>
+    <string name="dialog_text_delete">Confirm to delete the file?</string>
+    <string name="dialog_text_deletes">Confirm to delete the selected files?</string>
+    <string name="dialog_text_cancel">Confirm to cancel?</string>
+    <string name="dialog_action_yes">Yes</string>
+    <string name="dialog_action_no">No</string>
+
+    <string name="draw_layout_recording_quality">Recording quality</string>
+    <string name="draw_layout_encoding_format">Encoding Format</string>
+    <string name="privacy">Privacy</string>
+    <string name="draw_layout_feedback">Feedback</string>
+    <string name="about">About</string>
+    <string name="high">High</string>
+    <string name="normal">Normal</string>
+    <string name="lower">Low</string>
+    <string name="format_mkv">WAV</string>
+    <string name="format_mp4">MP4</string>
+    <string name="format_3gp">3GP</string>
+
+    <string name="dialog_name">Name:</string>
+    <string name="dialog_time">Time:</string>
+    <string name="dialog_length">Length:</string>
+    <string name="dialog_samp">Samping Rate:</string>
+    <string name="dialog_encoming">Encoming Format:</string>
+
+    <string name="main_tv_select">Select</string>
+    <string name="main_tv_selectall">SelectAll</string>
+
+    <string name="protocol"><u>Protocol</u></string>
+    <string name="toast_update_samle">Modifying the Recording quality may cause audio distortion.</string>
+    <string name="toast_update_format">This Recording format can not be suspended.</string>
+    <string name="fragment_select"> voice files have been seleted</string>
+    <string name="main_exit">Click again and you will exit app</string>
+    <string name="null_data_text">No recording at present</string>
+    <string name="myvoice">MyVoice</string>
+    <string name="do_not_update_sampling">Format cannot be modified in recording</string>
+    <string name="do_not_update_format">Format cannot be modified in recording</string>
+    <string name="do_not_update_name">The name cannot be modified in the recording.</string>
+    <string name="string_inputname">Please input name.</string>
+    <string name="string_named">The name already exists.</string>
+
+    <string name="string_mp4">.mp4</string>
+    <string name="string_3gp">.3gp</string>
+    <string name="sring_preservation">File has been saved successfully</string>
+    <string name="string_wav">.wav</string>
+    <string name="string_stopplay">Please stop playing and quit.</string>
+    <string name="string_stoprecord">Please stop recording first and quit.</string>
+    <string name="string_noinit">The recording has not been initialized. Please check whether the recording permission is prohibited.~</string>
+    <string name="string_recording">Being recordings</string>
+    <string name="string_norecord">No recording.</string>
+    <string name="string_notstart">The recording hasn\'t started yet.</string>
+    <string name="string_notempty">Name can not be empty.</string>
+    <string name="string_not_same">Names cannot be the same.</string>
+    <string name="string_already">The name already exists.</string>
+
+</resources>

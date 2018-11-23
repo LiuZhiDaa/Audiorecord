@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#222222</color>
+    <color name="colorPrimaryDark">#222222</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="colorMain">#222222</color>
+    <color name="colorGray">#666666</color>
+    <color name="colorRed">#FF3333</color>
+    <color name="colorWhite">#fff</color>
+    <color name="tab_text_color_normal">#60ffffff</color>
+    <color name="colorTextPrimary">#333333</color>
+    <color name="c_333333">#333333</color>
+    <color name="c_999999">#999999</color>
+    <color name="c_f3f3f3">#f3f3f3</color>
+    <color name="draw_layout_title_textview_color">#333333</color>
+
+    <color name="filter_color_grey_light">#c4c4c4</color>
+    <color name="filter_color_blue">#ff5cbadc</color>
+    <color name="c_dddddd">#DDDDDD</color>
+</resources>

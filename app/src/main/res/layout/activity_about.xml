@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/about_page_toolbar"
+        layout="@layout/setting_toolbar_layout" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/setting_about_top_divider_height"
+        android:layout_below="@+id/about_page_toolbar"
+        android:background="@color/filter_color_grey_light" />
+
+    <ImageView
+        android:id="@+id/about_app_logo_iv"
+        android:layout_width="@dimen/setting_about_logo_width"
+        android:layout_height="@dimen/setting_about_logo_height"
+        android:layout_below="@+id/about_page_toolbar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/setting_about_logo_margin_top"
+        android:src="@drawable/app_icon" />
+
+    <TextView
+        android:id="@+id/about_app_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/about_app_logo_iv"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/setting_about_app_name"
+        android:textColor="@color/black1"
+        android:textSize="@dimen/dp16"
+        tool:text="@string/app_name" />
+
+    <TextView
+        android:id="@+id/about_app_version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/about_app_name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/setting_about_app_version"
+        android:textColor="@color/black1"
+        android:textSize="@dimen/dp16" />
+
+
+    <TextView
+        android:id="@+id/about_page_protocol_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/setting_about_page_protocol_margin_bottom"
+        android:text="@string/protocol"
+        android:textColor="@color/filter_color_blue"
+        android:textSize="@dimen/dp16"
+        android:visibility="invisible" />
+
+</RelativeLayout>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.app.soundrecord">
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <!-- 在SDCard中创建与删除文件权限 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <!-- SD卡权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+
+
+    <application
+        android:name=".application.XApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/app_icon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths" />
+        </provider>
+        <activity android:name=".main.SplashActivity"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".main.MainActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity android:name=".main.drawer.AboutActivity"
+            android:screenOrientation="portrait"/>
+
+
+        <!--out-->
+        <activity
+            android:name=".out.page.CleanerActivity"
+            android:excludeFromRecents="true"
+            android:icon="@drawable/icon_launcher_clean"
+            android:label="@string/clean"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:taskAffinity="com.ulric.li"
+            android:theme="@style/OutTheme" />
+        <activity
+            android:name=".out.page.CoolActivity"
+            android:excludeFromRecents="true"
+            android:icon="@drawable/icon_launcher_cool"
+            android:label="@string/cool"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:taskAffinity="com.ulric.li"
+            android:theme="@style/OutTheme" />
+        <activity
+            android:name=".out.page.BoosterActivity"
+            android:excludeFromRecents="true"
+            android:icon="@drawable/icon_launcher_booster"
+            android:label="@string/booster"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:taskAffinity="com.ulric.li"
+            android:theme="@style/OutTheme" />
+        <activity
+            android:name=".out.page.NetworkActivity"
+            android:excludeFromRecents="true"
+            android:icon="@drawable/icon_launcher_network"
+            android:label="@string/wifi"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:taskAffinity="com.ulric.li"
+            android:theme="@style/OutTheme" />
+        <activity
+            android:name=".out.page.TestActivity"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:taskAffinity="com.ulric.li"
+            android:theme="@style/OutTheme" />
+        <activity
+            android:name=".out.page.call.MissCallActivity"
+            android:excludeFromRecents="true"
+            android:icon="@drawable/icon_launcher_call"
+            android:label="@string/call"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:taskAffinity="com.ulric.li"
+            android:theme="@style/OutTheme" />
+        <activity
+            android:name=".out.page.BatteryActivity"
+            android:excludeFromRecents="true"
+            android:icon="@drawable/icon_launcher_charge"
+            android:label="@string/battery"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:taskAffinity="com.ulric.li"
+            android:theme="@style/OutTheme" />
+        <activity
+            android:name=".out.page.BatteryEndActivity"
+            android:excludeFromRecents="true"
+            android:icon="@drawable/icon_launcher_charge"
+            android:label="@string/battery"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:taskAffinity="com.ulric.li"
+            android:theme="@style/OutTheme" />
+        <activity
+            android:name=".out.page.AntivirusActivity"
+            android:excludeFromRecents="true"
+            android:icon="@drawable/icon_antivirus"
+            android:label="@string/antivirus"
+            android:launchMode="singleTask"
+            android:noHistory="true"
+            android:screenOrientation="portrait"
+            android:taskAffinity="com.ulric.li" />
+        <activity
+            android:name=".out.page.BatteryOptimizeActivity"
+            android:excludeFromRecents="true"
+            android:icon="@drawable/battery_optimize_icon"
+            android:label="@string/battery_optimize"
+            android:launchMode="singleTask"
+            android:noHistory="true"
+            android:screenOrientation="portrait"
+            android:taskAffinity="com.ulric.li" />
+    </application>
+
+</manifest>

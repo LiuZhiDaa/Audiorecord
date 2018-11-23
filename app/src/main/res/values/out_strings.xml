@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--common-->
+    <dimen name="toolbar_title">18dp</dimen>
+    <dimen name="divider">1px</dimen>
+    <dimen name="toolbar_padding">20dp</dimen>
+    <dimen name="toolbar_icon_size">22dp</dimen>
+    <dimen name="common_close_icon_size">40dp</dimen>
+    <dimen name="common_content_margin_y">50dp</dimen>
+    <dimen name="common_result_view_width">140dp</dimen>
+
+
+    <string name="enable" translatable="false">Enable</string>
+    <string name="clean" translatable="false">Clean</string>
+    <string name="booster" translatable="false">Booster</string>
+    <string name="cool" translatable="false">Cool</string>
+    <string name="battery" translatable="false">Battery</string>
+    <string name="call" translatable="false">Call</string>
+    <string name="wifi" translatable="false">Wifi</string>
+    <string name="antivirus" translatable="false">Antivirus</string>
+    <string name="battery_optimize" translatable="false">BatteryOptimize</string>
+    <!--notify-->
+    <string name="notify_title" translatable="false">What\'s New</string>
+    <string name="notify_content" translatable="false">Smart to manage and optimize your phone:lock screen,Internet speed record,
+    call end,exit clean and WiFi optimize.</string>
+    <string name="notify_ad" translatable="false">(Probably has ads)</string>
+
+    <!--battery charging-->
+    <string name="battery_charging" translatable="false">Charging</string>
+    <string name="battery_charge_time" translatable="false">you have charged </string>
+    <string name="battery_charge_complete" translatable="false">Charge Complete</string>
+
+    <!--miss call activity-->
+    <string name="miss_call_activity_miss_call_num" translatable="false">You have missed calls</string>
+
+    <!--network-->
+    <string name="network_speeding" translatable="false">Speeding up your net</string>
+
+    <!--booster-->
+    <string name="booster_text" translatable="false">Speeding up your phone</string>
+
+    <!--clean-->
+    <string name="clean_text" translatable="false">Cleaning up your phone</string>
+    <string name="clean_result" translatable="false">Cleaning up %sMB garbage</string>
+    <string name="clean_update" translatable="false">Cleaning up %sMB garbage of update file</string>
+    <string name="clean_uninstall" translatable="false">Cleaning up %sMB garbage of uninstall APP</string>
+
+    <!--cool-->
+    <string name="cool_text" translatable="false">Cooling your cell phone…</string>
+    <string name="cool_result" translatable="false">Have cooled your phone %d℃</string>
+
+    <!--antivirus page-->
+    <string name="antivirus_text_scanning" translatable="false">Scanning installed apps.</string>
+    <string name="antivirus_text_scanning_result" translatable="false">The app is safe.</string>
+
+    <string name="battery_optimize_before" translatable="false">Battery optimization…</string>
+    <string name="battery_optimize_after" translatable="false">Battery endurance by %1$d%%</string>
+</resources>

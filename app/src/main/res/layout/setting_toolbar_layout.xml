@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/common_toolbar_height"
+    android:background="@color/colorPrimary">
+
+    <ImageView
+        android:id="@+id/setting_back"
+        android:layout_width="@dimen/setting_toolbr_left_close_width"
+        android:layout_height="match_parent"
+        android:scaleType="center"
+        android:src="@drawable/icon_back" />
+
+    <TextView
+        android:id="@+id/setting_title"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:textColor="@color/white1"
+        android:textSize="14dp"
+        android:textStyle="bold" />
+</RelativeLayout>

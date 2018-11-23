@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".main.MainActivity">
+
+    <com.app.soundrecord.view.MyToolbar
+        android:id="@+id/tool_bar"
+        app:mytoolbar_title="@string/app_name"
+        app:mytoolbar_icon="@drawable/icon_drawer"
+        android:elevation="@dimen/toolbar_elevation"
+        android:background="@color/colorMain"
+        android:layout_height="?android:attr/actionBarSize"
+        android:layout_width="match_parent">
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/main_toolbar_ln"
+            android:layout_gravity="end"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+           <TextView
+               android:id="@+id/main_tv_select"
+               android:layout_marginRight="@dimen/dp16"
+               android:layout_gravity="center"
+               android:textColor="@color/colorWhite"
+               android:text="@string/main_tv_select"
+               android:textSize="@dimen/dp16"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </com.app.soundrecord.view.MyToolbar>
+
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tab_layout"
+        android:background="@color/colorMain"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        app:tabSelectedTextColor="@color/colorWhite"
+        app:tabTextColor="@color/tab_text_color_normal"
+        app:tabIndicatorColor="@color/colorRed"
+        android:elevation="@dimen/toolbar_elevation"
+        app:tabGravity="fill"
+        app:tabMode="fixed"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <FrameLayout
+        android:id="@+id/fl_banner_ad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite" />
+
+</LinearLayout>

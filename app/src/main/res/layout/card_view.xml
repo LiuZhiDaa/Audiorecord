@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_gravity="center"
+        android:layout_margin="0dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:transitionName="open_mediaplayer"
+       >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingLeft="14dp">
+
+            <ImageView
+                android:id="@+id/iv_horn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="11dp"
+                android:background="@drawable/icon_horn"
+                android:visibility="gone"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_gravity="center_vertical">
+
+                <TextView
+                    android:layout_centerVertical="true"
+                    android:id="@+id/file_name_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="file_name"
+                    android:textSize="15sp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textStyle="bold"/>
+                <LinearLayout
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:layout_gravity="center"
+                        android:layout_marginRight="20dp"
+                        android:id="@+id/file_length_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="00:00"
+                        android:textSize="15sp"
+                        android:fontFamily="sans-serif-condensed"/>
+                    <ImageView
+                        android:scaleType="center"
+                        android:id="@+id/voice_img_more"
+                        android:src="@drawable/icon_gengduo"
+                        android:layout_width="@dimen/dp30"
+                        android:layout_height="match_parent" />
+                    <CheckBox
+
+                        android:id="@+id/file_check"
+                        android:visibility="gone"
+                        android:layout_marginRight="20dp"
+                        android:layout_gravity="center"
+                        style="@style/CustomCheckBoxTheme"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/file_date_added_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="mmm dd yyyy - hh:mm a"
+                    android:textSize="12sp"
+                    android:fontFamily="sans-serif-condensed"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

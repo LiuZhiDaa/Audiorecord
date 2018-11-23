@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "671972244850",
+    "firebase_url": "https://voice-recorder-ce840.firebaseio.com",
+    "project_id": "voice-recorder-ce840",
+    "storage_bucket": "voice-recorder-ce840.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:671972244850:android:a7cdc9512c9c9334",
+        "android_client_info": {
+          "package_name": "com.recorder.voice.recording.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "671972244850-a28joj1go4btu0qcj02d0ajuf0hok6mj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBfv3xJy5Thq6mJd5qtPvTKfkkBuFl0h08"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

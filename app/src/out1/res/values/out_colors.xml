@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--common-->
+    <color name="toolbar_background">@color/black3</color>
+    <color name="toolbar_content">@color/white1</color>
+    <color name="divider">@color/white4</color>
+
+    <!--network page-->
+    <color name="network_change_round_bg_color">#30000000</color>
+    <color name="network_change_page_bg">#7874F2</color>
+
+    <!--main ad dialog -->
+    <color name="main_ad_dialog_divider_color">@color/gray1</color>
+    <color name="main_page_light_bg">#221E10</color>
+
+    <!--battery charging-->
+    <color name="battery_charging">#37CEF9</color>
+    <color name="battery_charging_bg">#FB9740</color>
+    <color name="white21">#20FFFFFF</color>
+    <color name="white40">#40FFFFFF</color>
+
+    <!--miss call cativity-->
+    <color name="miss_call_activity_bg">#5677FC</color>
+
+    <!--anivirus page-->
+    <color name="anivirus_page_bg_color">#2ba244</color>
+
+    <!--clean page-->
+    <color name="clean_page_bg_color">#FF6767</color>
+
+
+    <!--电池优化-->
+    <color name="battery_optimize_bg">#1ABB9C</color>
+    <!--加速-->
+    <color name="booster_page_bg_color">#FF6561</color>
+
+    <!--降温-->
+    <color name="cool_page_bg_color">#2F89FC</color>
+
+    <!--充电完成-->
+    <color name="battery_end_bg">#FB9740</color>
+
+
+</resources>

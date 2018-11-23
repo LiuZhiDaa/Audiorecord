@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MyToolbar">
+        <attr name="mytoolbar_title" format="string|reference"/>
+        <attr name="mytoolbar_right_text" format="string|reference"/>
+        <attr name="mytoolbar_icon" format="reference"/>
+    </declare-styleable>
+
+
+</resources>

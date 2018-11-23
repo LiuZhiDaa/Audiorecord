@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:background="@color/white1">
+    <LinearLayout
+        android:id="@+id/lin_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <ImageView
+        android:clickable="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/ch_bj"
+        android:layout_width="match_parent"
+        android:layout_height="149dp" />
+    <android.support.v7.widget.AppCompatTextView
+        android:visibility="gone"
+        android:id="@+id/tv_recording_quality"
+        android:text="@string/draw_layout_recording_quality"
+        style="@style/draw_layout_text_view_style"
+        android:layout_marginTop="60dp"/>
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_encoding_format"
+        android:text="@string/draw_layout_encoding_format"
+        style="@style/draw_layout_text_view_style" />
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_privacy"
+        android:text="@string/privacy"
+        style="@style/draw_layout_text_view_style" />
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_feed_back"
+        android:text="@string/draw_layout_feedback"
+        style="@style/draw_layout_text_view_style" />
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_about"
+        android:text="@string/about"
+        style="@style/draw_layout_text_view_style" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lin_null"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff"
+        android:orientation="vertical"
+        android:layout_below="@id/lin_content"
+        android:layout_above="@id/tv_version"
+         />
+
+<TextView
+    android:gravity="center"
+    android:id="@+id/tv_version"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:textColor="#666666"
+    android:textSize="@dimen/dp16"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    android:layout_marginBottom="27dp"
+    android:layout_alignParentBottom="true"
+    android:layout_centerHorizontal="true"
+    />
+
+</RelativeLayout>
