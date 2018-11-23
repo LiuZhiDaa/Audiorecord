@@ -439,7 +439,7 @@ public class RecordFragment extends BaseFragment implements IAudioCallback ,IPho
         @Override
         public void onRequestConfigAsync(boolean bSuccess) {
             if (!mHasBannerAdShow) {
-                requestBannerAd();
+
             }
         }
     };

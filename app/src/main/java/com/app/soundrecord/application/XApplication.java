@@ -24,7 +24,7 @@ import ulric.li.utils.UtilsEnv;
 import ulric.li.utils.UtilsJson;
 import ulric.li.utils.UtilsLog;
 import ulric.li.utils.UtilsNetwork;
-import ulric.li.xout.core.status.IAppStatusMgr;
+
 
 public class XApplication extends Application {
     private static Context sInstance;
@@ -54,7 +54,7 @@ public class XApplication extends Application {
 
     private void initLogic() {
         initCountry();
-        IAppStatusMgr appStatusMgr = (IAppStatusMgr) XCoreFactory.getInstance().createInstance(IAppStatusMgr.class);
+
 //        appStatusMgr.init();
     }
 

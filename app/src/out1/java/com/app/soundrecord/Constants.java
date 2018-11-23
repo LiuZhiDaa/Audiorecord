@@ -7,19 +7,19 @@ public class Constants {
     /**
      * 服务器地址  密钥  服务条款 隐私协议
      */
-    public static final String VALUE_STRING_DOMAIN_NAME = "xvoiceone.com";
-    public static final String VALUE_STRING_BLOW_FISH_KEY = "tBbR!vu#9DDoz";
-    public static final String VALUE_STRING_TERMS_OF_SERVICE_URL = "https://sites.google.com/view/kathern-paskett";
-    public static final String VALUE_STRING_PRIVACY_POLICY_URL = "https://sites.google.com/view/kathernpaskett";
+    public static final String VALUE_STRING_DOMAIN_NAME = ".com";
+    public static final String VALUE_STRING_BLOW_FISH_KEY = "!#";
+    public static final String VALUE_STRING_TERMS_OF_SERVICE_URL = "";
+    public static final String VALUE_STRING_PRIVACY_POLICY_URL = "";
 
     /**
      * 后台数据库名称
      */
-    public static final String VALUE_STRING_DB_NAME = "voicerecorder_out1_android";
+    public static final String VALUE_STRING_DB_NAME = "";
 
     /**
      * app名称  内部使用的
      */
-    public static final String VALUE_STRING_APP_NAME = "android_voicerecorder_out1";
+    public static final String VALUE_STRING_APP_NAME = "";
 
 }

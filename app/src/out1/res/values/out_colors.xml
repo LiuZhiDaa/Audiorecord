@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!--common-->
-    <color name="toolbar_background">@color/black3</color>
-    <color name="toolbar_content">@color/white1</color>
-    <color name="divider">@color/white4</color>
+    <color name="toolbar_background">#221E10</color>
+    <color name="toolbar_content">#FFF</color>
+    <color name="divider">#FFF</color>
 
     <!--network page-->
     <color name="network_change_round_bg_color">#30000000</color>

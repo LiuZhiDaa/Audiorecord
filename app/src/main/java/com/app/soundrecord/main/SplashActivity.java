@@ -7,11 +7,9 @@ import com.app.soundrecord.R;
 import com.app.soundrecord.core.XCoreFactory;
 import com.app.soundrecord.core.config.intf.IConfigMgr;
 import com.app.soundrecord.core.config.intf.IConfigMgrListener;
-import com.app.soundrecord.util.UtilsAd;
 
 import ulric.li.XLibFactory;
-import ulric.li.XProfitFactory;
-import ulric.li.ad.intf.IAdMgr;
+
 import ulric.li.logic.alive.UtilsBroadcast;
 import ulric.li.utils.UtilsLog;
 import ulric.li.xlib.intf.IXTimer;
@@ -21,7 +19,7 @@ public class SplashActivity extends AppCompatActivity {
     private static final long VALUE_LONG_WAIT_TIME = 2500;
     private IConfigMgr mIConfigMgr = null;
     private IConfigMgrListener mIConfigMgrListener = null;
-    private IAdMgr mIAdMgr = null;
+
     private int mCheckLoadingCompleteCount = 0;
     private IXTimer mIXTimer;
 
@@ -37,7 +35,7 @@ public class SplashActivity extends AppCompatActivity {
         mIConfigMgrListener = new IConfigMgrListener() {
             @Override
             public void onDetectLocalInfoAsyncComplete() {
-                requestAd();
+
                 checkLoadingComplete();
             }
 
@@ -51,7 +49,7 @@ public class SplashActivity extends AppCompatActivity {
         }
         mIConfigMgr.requestConfigAsync();
 
-        mIAdMgr = (IAdMgr) XProfitFactory.getInstance().createInstance(IAdMgr.class);
+
 
         // 启动定时器等待结束界面
         mIXTimer = (IXTimer) XLibFactory.getInstance().createInstance(IXTimer.class);
@@ -95,9 +93,7 @@ public class SplashActivity extends AppCompatActivity {
         }
     }
 
-    private void requestAd() {
-        UtilsAd.requestAd(mIAdMgr.getAdConfig(IConfigMgr.VALUE_STRING_CONFIG_BANNER_MAIN_AD_KEY), "splash");
-    }
+
 
     private void checkLoadingComplete() {
         mCheckLoadingCompleteCount--;

@@ -47,7 +47,7 @@ import java.util.TimerTask;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import ulric.li.ad.intf.IAdConfig;
+
 import ulric.li.utils.UtilsApp;
 
 public class MainActivity extends BaseActivity {
@@ -167,41 +167,13 @@ public class MainActivity extends BaseActivity {
             }
         });
 
-        requestBannerAd();
-        showBannerAd(false);
-        mIConfigMgr = (IConfigMgr) XCoreFactory.getInstance().createInstance(IConfigMgr.class);
-        mIConfigMgr.addListener(mIConfigMgrListener);
+
     }
 
-    IConfigMgrListener mIConfigMgrListener = new IConfigMgrListener() {
-        @Override
-        public void onDetectLocalInfoAsyncComplete() {
-
-        }
-
-        @Override
-        public void onRequestConfigAsync(boolean bSuccess) {
-            if (!mHasBannerAdShow) {
-                requestBannerAd();
-            }
-        }
-    };
 
 
-    @Override
-    public ViewGroup getBannerAdLayout() {
-        return flBannerAd;
-    }
 
-    @Override
-    public String getBannerAdRequestScene() {
-        return "main_create";
-    }
 
-    @Override
-    public IAdConfig getBannerAdConfig() {
-        return mIAdMgr.getAdConfig(IConfigMgr.VALUE_STRING_CONFIG_BANNER_MAIN_AD_KEY);
-    }
 
     @OnClick({R.id.tv_recording_quality, R.id.tv_encoding_format, R.id.tv_privacy, R.id.tv_feed_back, R.id.tv_about, R.id.main_toolbar_ln, R.id.lin_null})
     public void onViewClicked(View view) {
@@ -368,9 +340,7 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        if (mIConfigMgr != null) {
-            mIConfigMgr.removeListener(mIConfigMgrListener);
-        }
+
         if (miToolbarManager != null) {
             miToolbarManager.removeListener(iToolbarListener);
         }

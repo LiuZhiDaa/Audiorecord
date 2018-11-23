@@ -16,8 +16,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import ulric.li.XLibFactory;
-import ulric.li.XProfitFactory;
-import ulric.li.ad.intf.IAdMgr;
+
 import ulric.li.tool.intf.IHttpTool;
 import ulric.li.tool.intf.IHttpToolResult;
 import ulric.li.utils.UtilsApp;
@@ -29,15 +28,14 @@ import ulric.li.utils.UtilsTime;
 import ulric.li.xlib.impl.XObserverAutoRemove;
 import ulric.li.xlib.intf.IXThreadPool;
 import ulric.li.xlib.intf.IXThreadPoolListener;
-import ulric.li.xout.core.config.impl.OutConfig;
-import ulric.li.xout.core.config.intf.IOutConfig;
+
 
 public class ConfigMgr extends XObserverAutoRemove<IConfigMgrListener> implements IConfigMgr {
     private Context mContext = null;
     private IXThreadPool mIXThreadPool = null;
     private IHttpTool mIHttpTool = null;
 
-    private IAdMgr mIAdMgr = null;
+
 
     private String VALUE_STRING_CONFIG_FILE = "config.dat";
 
@@ -49,7 +47,7 @@ public class ConfigMgr extends XObserverAutoRemove<IConfigMgrListener> implement
     private void _init() {
         mIXThreadPool = (IXThreadPool) XLibFactory.getInstance().createInstance(IXThreadPool.class);
         mIHttpTool = (IHttpTool) XLibFactory.getInstance().createInstance(IHttpTool.class);
-        mIAdMgr = (IAdMgr) XProfitFactory.getInstance().createInstance(IAdMgr.class);
+
     }
 
     @Override
@@ -57,10 +55,10 @@ public class ConfigMgr extends XObserverAutoRemove<IConfigMgrListener> implement
         mIXThreadPool.addTask(new IXThreadPoolListener() {
             @Override
             public void onTaskRun() {
-                if (mIAdMgr.isNeedLoadConfig()) {
+
                     JSONObject jsonObject = UtilsJson.loadJsonFromFileWithDecrypt(mContext, VALUE_STRING_CONFIG_FILE);
                     loadConfig(jsonObject);
-                }
+
             }
 
             @Override
@@ -151,23 +149,7 @@ public class ConfigMgr extends XObserverAutoRemove<IConfigMgrListener> implement
         if (null == jsonObject)
             return false;
 
-        try {
-            if (jsonObject.has("cloud")) {
-                UtilsJson.JsonUnserialization(jsonObject, "cloud", ICloudConfig.class, CloudConfig.class);
-            }
 
-            if (jsonObject.has("ad")) {
-                mIAdMgr.loadConfig(jsonObject.getJSONObject("ad"));
-            }
-
-            if (jsonObject.has("out")) {
-                UtilsJson.JsonUnserialization(jsonObject, "out", IOutConfig.class, OutConfig.class);
-            }
-
-            return true;
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
 
         return false;
     }
